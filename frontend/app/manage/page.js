@@ -33,6 +33,20 @@ export default function Manage() {
       });
   };
 
+  const hapusData = (uuid) => {
+    fetch("http://localhost:8850/data/" + uuid, {
+      cache: "no-store",
+      method: "DELETE",
+    })
+      .then(() => {
+        console.log("ok");
+        document.getElementById("button_reload_list").click();
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+  };
+
   function export_ready() {
     $("#tabelx").DataTable({
       lengthMenu: [
@@ -134,6 +148,7 @@ export default function Manage() {
               <th>Gambar</th>
               <th>Judul</th>
               <th>Kategori</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -148,6 +163,17 @@ export default function Manage() {
                 </td>
                 <td>{item.judul}</td>
                 <td>{item.kategori}</td>
+                <td>
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => {
+                      hapusData(item.uuid);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

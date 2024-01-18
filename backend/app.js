@@ -162,7 +162,7 @@ app.delete("/data/:uuid", (req, res) => {
           }
 
           deleteFile(`${uploadDir}/${dataToDelete.gambar}`);
-          res.redirect("../");
+          res.send("deleted");
         }
       );
     }
