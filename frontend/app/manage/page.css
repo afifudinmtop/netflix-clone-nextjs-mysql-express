@@ -1,0 +1,20 @@
+body {
+  background: #e9ecef !important;
+}
+.button_export {
+  color: white !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+}
+
+#tabel_area {
+  width: 75vw;
+}
+
+tr {
+  height: 50px !important;
+}
+
+.manage_gambar {
+  width: 100px;
+}

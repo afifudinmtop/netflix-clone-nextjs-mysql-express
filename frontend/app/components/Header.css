@@ -1,0 +1,32 @@
+.header_logo {
+  width: 92px;
+}
+
+.header-fix {
+  position: fixed;
+  top: 0;
+  background-color: #141414 !important;
+  z-index: 1000;
+  width: -webkit-fill-available;
+  padding-top: 20px;
+}
+
+.header_avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.header_search {
+  width: 24px;
+  height: 24px;
+}
+
+.header_notif {
+  width: 24px;
+  height: 24px;
+}
+
+.menu_fs {
+  font-size: 14px;
+}
